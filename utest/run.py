@@ -14,6 +14,7 @@ options:
 
 from __future__ import print_function
 import unittest
+import pytest
 import os
 import sys
 import re
@@ -91,10 +92,11 @@ def usage_exit(msg=None):
 if __name__ == '__main__':
     docs, vrbst = parse_args(sys.argv[1:])
     tests = get_tests()
-    suite = unittest.TestSuite(tests)
-    runner = unittest.TextTestRunner(descriptions=docs, verbosity=vrbst)
-    result = runner.run(suite)
-    rc = len(result.failures) + len(result.errors)
-    if rc > 250:
-        rc = 250
-    sys.exit(rc)
+    pytest.main()
+    #suite = unittest.TestSuite(tests)
+    #runner = unittest.TextTestRunner(descriptions=docs, verbosity=vrbst)
+    #result = runner.run(suite)
+    #rc = len(result.failures) + len(result.errors)
+    #if rc > 250:
+    #    rc = 250
+    #sys.exit(rc)

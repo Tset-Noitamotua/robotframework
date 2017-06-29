@@ -11,6 +11,7 @@ def test_convert(item, **expected):
     for name in expected:
         assert_equal(item[name], expected[name])
 
+test_convert.__test__ = False
 
 class TestJsonConverter(unittest.TestCase):
     suite = None
