@@ -1,8 +1,8 @@
+Robot Framework
+===============
 .. image:: https://circleci.com/gh/Tset-Noitamotua/robotframework.svg?style=svg
     :target: https://circleci.com/gh/Tset-Noitamotua/robotframework
 
-Robot Framework
-===============
 
 .. contents::
    :local:
