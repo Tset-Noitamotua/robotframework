@@ -1,8 +1,5 @@
 Robot Framework
 ===============
-.. image:: https://circleci.com/gh/Tset-Noitamotua/robotframework.svg?style=svg
-    :target: https://circleci.com/gh/Tset-Noitamotua/robotframework
-
 
 .. contents::
    :local:
@@ -44,6 +41,10 @@ Robot Framework development is sponsored by `Robot Framework Foundation
 .. image:: https://img.shields.io/pypi/l/robotframework.svg
    :target: http://www.apache.org/licenses/LICENSE-2.0.html
    :alt: License
+
+.. image:: https://circleci.com/gh/Tset-Noitamotua/robotframework.svg?style=svg
+    :target: https://circleci.com/gh/Tset-Noitamotua/robotframework
+    :alt: CircleCI Build Status
 
 Installation
 ------------
