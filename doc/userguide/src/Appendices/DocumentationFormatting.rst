@@ -31,8 +31,13 @@ to test suites, newlines can be added manually using `\n` `escape sequence`_.
 .. sourcecode:: robotframework
 
   *** Settings ***
-  Documentation    First line.\n\nSecond paragraph, this time\nwith multiple lines.
-  Metadata         Example    Value\nin two lines
+  Documentation    First line.\n\nSecond paragraph. This time\nwith multiple lines.
+  Metadata         Example list    - first item\n- second item\n- third
+
+.. note:: As explained in the Paragraphs_ section below, the single newline in
+          `Second paragraph, this time\nwith multiple lines.` does not actually
+          affect how that paragraph is rendered. Newlines are needed when
+          creating lists_ or other such constructs, though.
 
 Adding newlines manually to a long documentation takes some effort and extra
 characters also make the documentation harder to read. This can be avoided,
@@ -46,12 +51,12 @@ means that the above example could be written also as follows.
   Documentation
   ...    First line.
   ...
-  ...    Second paragraph, this time
+  ...    Second paragraph. This time
   ...    with multiple lines.
-  Metadata
-  ...    Example
-  ...    Value
-  ...    in two lines
+  Metadata    Example list
+  ...    - first item
+  ...    - second item
+  ...    - third
 
 No automatic newline is added if a line already ends with a literal newline
 or if it ends with an `escaping backslash`__. If documentation or metadata
@@ -60,6 +65,12 @@ with spaces. This kind of splitting can be a good idea especially when
 using the `HTML format`_ and columns are narrow. Different ways to split
 documentation are illustrated in the examples below where all test cases
 end up having the same two line documentation.
+
+.. note:: Handling documentation split to multiple columns will change in
+          Robot Framework 3.2 when also they will be concatenated together
+          with newlines. This change should not cause problems because,
+          as explained in the Paragraphs_ section below, single newlines do
+          not affect how paragraphs actually are rendered in logs and reports.
 
 __ `Dividing test data to several rows`_
 __ Escaping_
