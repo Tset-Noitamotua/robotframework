@@ -23,7 +23,7 @@ jobs:
         pip install -r atest/requirements.txt
    
     - name: Execute Acceptance Tests
-    - run: |
+      run: |
         atest/run.py python --exclude no-ci atest/robot
         
         
